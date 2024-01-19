@@ -2,5 +2,9 @@
 import { SignIn } from "@clerk/nextjs";
 
 export default function page() {
-    return <SignIn />;
+    return (
+        <main className="flex items-center justify-center min-h-screen py-12 px-4 sm:px-6 lg:px-8 bg-black bg-cover bg-center bg-[url('/hero1.jpg')]">
+            <SignIn />
+        </main>
+    );
 }

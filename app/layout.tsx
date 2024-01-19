@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Oswald } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
+import { dark, neobrutalism } from '@clerk/themes';
 
 const oswald = Oswald({ subsets: ["latin"] });
 
@@ -16,7 +17,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      appearance={{
+        baseTheme: dark
+      }}>
       <html lang="en">
         <body className={oswald.className}>{children}</body>
       </html>

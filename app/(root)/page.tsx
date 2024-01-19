@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main>
       <section
-        className="relative w-full h-[86vh] bg-cover bg-center bg-[url('/hero1.jpg')]"
+        className="relative w-full h-screen bg-cover bg-center bg-[url('/hero1.jpg')]"
 
       >
         <div className="absolute inset-0 bg-black opacity-50" />

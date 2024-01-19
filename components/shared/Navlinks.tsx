@@ -1,3 +1,5 @@
+'use client'
+
 import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 import React from 'react'
 import { Button } from '../ui/button'
@@ -5,8 +7,8 @@ import Link from 'next/link'
 
 const Navlinks = () => {
     return (
-        <div className='flex gap-4 items-center'>
-            <div className='flex gap-4 items-center'>
+        <nav className='bg-transparent flex flex-col md:flex-row justify-center items-center gap-4 '>
+            <div className='flex flex-col justify-center items-center gap-4 '>
                 <Link href="/">
                     Home
                 </Link>
@@ -22,10 +24,7 @@ const Navlinks = () => {
                     <Link href="/sign-in">Login</Link>
                 </Button>
             </SignedOut>
-            <SignedIn>
-                <UserButton afterSignOutUrl='/' />
-            </SignedIn>
-        </div>
+        </nav>
     )
 }
 
