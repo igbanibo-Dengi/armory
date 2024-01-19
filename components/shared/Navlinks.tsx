@@ -1,8 +1,28 @@
+import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 import React from 'react'
+import { Button } from '../ui/button'
+import Link from 'next/link'
 
 const Navlinks = () => {
     return (
-        <div>Navlinks</div>
+        <div className='flex gap-4 items-center text-sm'>
+            <div className='flex gap-4 items-center'>
+                <Link href="/">
+                    Home
+                </Link>
+                <Link href="/profile">
+                    Profile
+                </Link>
+            </div>
+            <SignedOut>
+                <Button asChild size="sm">
+                    <Link href="/sign-in">Login</Link>
+                </Button>
+            </SignedOut>
+            <SignedIn>
+                <UserButton afterSignOutUrl='/' />
+            </SignedIn>
+        </div>
     )
 }
 

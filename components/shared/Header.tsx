@@ -1,13 +1,15 @@
-import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
+'use client'
+
 import Image from 'next/image'
-import Link from 'next/link'
 import React from 'react'
-import { Button } from '../ui/button'
+import Navlinks from './Navlinks'
+import { useRouter } from 'next/navigation'
 
 const Header = () => {
+    const pathname = useRouter();
     return (
-        <nav className='py-5'>
-            <div className='container px-10'>
+        <nav className='py-5 border-b-2'>
+            <div className='container flex justify-between px-10'>
 
                 <Image
                     src="/logo-main.svg"
@@ -15,14 +17,7 @@ const Header = () => {
                     width={100}
                     height={50}
                 />
-                <SignedOut>
-                    <Button asChild size={"lg"}>
-                        <Link href="/sign-in">Login</Link>
-                    </Button>
-                </SignedOut>
-                <SignedIn>
-                    <UserButton afterSignOutUrl='/'></UserButton>
-                </SignedIn>
+                <Navlinks />
             </div>
         </nav>
     )
