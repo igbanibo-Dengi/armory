@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation'
 const Header = () => {
     const pathname = useRouter();
     return (
-        <nav className='py-5 border-b-2'>
+        <nav className='py-5 bg-black'>
             <div className='container flex justify-between px-10'>
 
                 <Image

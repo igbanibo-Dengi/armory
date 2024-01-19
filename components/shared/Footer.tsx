@@ -7,7 +7,7 @@ import Image from 'next/image'
 
 const Footer = () => {
     return (
-        <footer className="w-full py-12 border-t-2 text-white">
+        <footer className="w-full py-12 bg-black border-t-2 text-white">
             <div className="container px-4 md:px-6 lg:px-8 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
                 <div className='flex items-center justify-center'>
                     <Image
@@ -19,7 +19,7 @@ const Footer = () => {
                 </div>
                 <div className='flex items-center text-center'>
                     <p>Armory is a unique platform for user to create and share CODM loadouts.
-                        Build, Share, and collectively inspire the gaming community – that's the essence of Armory.
+                        Build, Share, and collectively inspire the gaming community – tha&apos;s the essence of Armory.
                     </p>
                 </div>
                 <div className="flex flex-col space-y-4 items-center  lg:pl-20">

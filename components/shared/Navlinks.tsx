@@ -5,13 +5,16 @@ import Link from 'next/link'
 
 const Navlinks = () => {
     return (
-        <div className='flex gap-4 items-center text-sm'>
+        <div className='flex gap-4 items-center'>
             <div className='flex gap-4 items-center'>
                 <Link href="/">
                     Home
                 </Link>
+                <Link href="/">
+                    Explore
+                </Link>
                 <Link href="/profile">
-                    Profile
+                    My Loadouts
                 </Link>
             </div>
             <SignedOut>
