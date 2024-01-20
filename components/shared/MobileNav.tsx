@@ -4,8 +4,6 @@ import {
     SheetContent,
     SheetTrigger,
 } from "@/components/ui/sheet"
-import Navlinks from './Navlinks'
-import { GiHeavyBullets } from 'react-icons/gi'
 import Link from 'next/link'
 import { SignedOut } from '@clerk/nextjs'
 import { Button } from '../ui/button'
@@ -20,6 +18,7 @@ const MobileNav = () => {
             <Sheet>
                 <SheetTrigger><AlignJustify /></SheetTrigger>
                 <SheetContent className='flex flex-col gap-4 pt-20 w-[200px] bg-black'>
+                    <Separator />
                     <Link href="/">
                         Home
                     </Link>
@@ -38,7 +37,9 @@ const MobileNav = () => {
                         <Button asChild size="lg" className='w-fit'>
                             <Link href="/sign-in">Login</Link>
                         </Button>
+                        <Separator />
                     </SignedOut>
+
                 </SheetContent>
             </Sheet>
 
