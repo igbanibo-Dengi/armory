@@ -35,6 +35,6 @@ const LoadoutSchema = new Schema({
     creator: { type: Schema.Types.ObjectId, ref: 'User' },
 })
 
-const Event = models.Event || model('Event', LoadoutSchema);
+const Loadout = models.Loadout || model('Loadout', LoadoutSchema);
 
-export default Event;
+export default Loadout;

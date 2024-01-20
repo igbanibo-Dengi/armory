@@ -37,15 +37,22 @@ const Header = () => {
                 </div>
 
                 <div className='hidden md:flex flex-col md:flex-row justify-center items-center gap-4 '>
-                    <Link href="/">
-                        Home
-                    </Link>
+                    <SignedIn>
+                        <Link href="/loadouts/create">
+                            Build
+                        </Link>
+                    </SignedIn>
+                    <SignedOut>
+                        <Link href="/">Home</Link>
+                    </SignedOut>
                     <Link href="/">
                         Explore
                     </Link>
-                    <Link href="/profile">
-                        My Loadouts
-                    </Link>
+                    <SignedIn>
+                        <Link href="/profile">
+                            My Loadouts
+                        </Link>
+                    </SignedIn>
                 </div>
                 <div className='hidden md:flex justify-end'>
                     <SignedOut>
