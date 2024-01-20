@@ -11,9 +11,6 @@ export interface IEvent extends Document {
     thirdAttachment: string
     fourthAttachment: string
     fifthAttachment: string
-    // firstPerk?: string,
-    // secondPerk?: string,
-    // thirdPerk?: string,
     createdAt: Date;
     imageUrl: string;
     url?: string;
@@ -31,9 +28,6 @@ const LoadoutSchema = new Schema({
     thirdAttachment: { type: String, required: true },
     fourthAttachment: { type: String, required: true },
     fifthAttachment: { type: String, required: true },
-    // firstPerk: { type: String },
-    // secondPerk: { type: String },
-    // thirdPerk: { type: String },
     createdAt: { type: Date, default: Date.now },
     imageUrl: { type: String, required: true },
     url: { type: String },
